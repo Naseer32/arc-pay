@@ -113,6 +113,8 @@
 
   .balance-card {
     display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
     justify-content: space-between;
     align-items: center;
     background: var(--ink);
@@ -297,7 +299,7 @@
         <div class="amount"><span id="balanceAmt">—</span></div>
         <div class="addr" id="walletAddr">0x...</div>
       </div>
-      <button class="" id="disconnectBtn">Disconnect</button>
+      <button class="" id="disconnectBtn" style="flex-shrink:0; padding:10px 16px; font-size:13px;">Disconnect</button>
     </div>
 
     <div class="section-label">

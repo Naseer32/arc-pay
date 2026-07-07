@@ -504,7 +504,7 @@
       for (const id of sortedIds) {
         const p = await contract.getPayment(id);
         const isOutgoing = p.from.toLowerCase() === userAddress.toLowerCase();
-        const amt = ethers.utils.formatUnits(p.amount, 6);
+        const amt = ethers.utils.formatUnits(p.amount, 18);
         const date = new Date(p.timestamp.toNumber() * 1000);
 
         const entry = document.createElement("div");

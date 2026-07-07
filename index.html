@@ -428,7 +428,7 @@
     try {
       const bal = await provider.getBalance(userAddress);
       // Arc's native token (USDC) uses 6 decimals, not 18
-      const formatted = ethers.utils.formatUnits(bal, 6);
+      const formatted = ethers.utils.formatUnits(bal, 18);
       el("balanceAmt").textContent = Number(formatted).toLocaleString(undefined, { maximumFractionDigits: 2 }) + " USDC";
     } catch (err) {
       console.error(err);

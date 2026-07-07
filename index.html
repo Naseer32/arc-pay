@@ -460,8 +460,8 @@
       el("sendBtn").disabled = true;
       showStatus("Confirm the transaction in your wallet…", "pending");
 
-      // Arc native token uses 6 decimals
-      const value = ethers.utils.parseUnits(amountStr, 6);
+      // Arc native token uses 18 decimals
+      const value = ethers.utils.parseUnits(amountStr, 18);
       const tx = await contract.sendPayment(to, memo, { value });
 
       showStatus("Transaction submitted. Waiting for confirmation…", "pending");
